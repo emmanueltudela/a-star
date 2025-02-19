@@ -24,7 +24,7 @@ common warnings
     ghc-options: -Wall
 
 library
-    exposed-modules:
+    exposed-modules:  AStar
 
     build-depends:    base ^>=4.17.2.1
     hs-source-dirs:   src
@@ -36,7 +36,7 @@ executable a-star
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules:    AStar
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.17.2.1
