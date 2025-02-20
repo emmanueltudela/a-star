@@ -24,7 +24,7 @@ common warnings
     ghc-options: -Wall
 
 library
-    exposed-modules:  AStar
+    exposed-modules:  AStar, Grid
 
     build-depends:    base ^>=4.17.2.1
     hs-source-dirs:   src
@@ -34,11 +34,19 @@ Test-suite test-astar
     type:             exitcode-stdio-1.0
     main-is:          test-astar.hs
 
-    other-modules:    AStar
+    other-modules:    AStar, Grid
 
     build-depends:    base ^>=4.17.2.1
     hs-source-dirs:   test, src
 
+Test-suite test-grid
+    type:             exitcode-stdio-1.0
+    main-is:          test-grid.hs
+
+    other-modules:    Grid
+
+    build-depends:    base ^>=4.17.2.1
+    hs-source-dirs:   test, src
 
 executable a-star
     -- Import common warning flags.
@@ -46,7 +54,7 @@ executable a-star
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    other-modules:    AStar
+    other-modules:    AStar, Grid
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.17.2.1
